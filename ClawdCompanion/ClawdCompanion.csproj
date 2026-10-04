@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>ClawdCompanion</AssemblyName>
+    <RootNamespace>ClawdCompanion</RootNamespace>
+    <ApplicationIcon>Assets\clawd.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Product>Clawd Companion</Product>
+    <AssemblyTitle>Clawd Companion</AssemblyTitle>
+    <Description>A living 3D Clawd desktop companion for Windows 11.</Description>
+    <Version>1.0.0</Version>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <TieredPGO>true</TieredPGO>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\clawd_rig.obj" />
+    <None Remove="Assets\clawd.ico" />
+    <EmbeddedResource Include="Assets\clawd_rig.obj" LogicalName="ClawdCompanion.clawd_rig.obj" />
+    <EmbeddedResource Include="Assets\clawd.ico" LogicalName="ClawdCompanion.clawd.ico" />
+  </ItemGroup>
+
+</Project>
